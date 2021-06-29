@@ -16,9 +16,9 @@
 #include <boost/thread/condition.hpp>
 #include <boost/foreach.hpp>
 
-using namespace std;
+//using namespace std;
 
-
+/*
 struct Log{
 	static boost::mutex& mutex(){ static boost::mutex LogMtx; return LogMtx; }
 	boost::mutex::scoped_lock locker;
@@ -28,9 +28,10 @@ struct Log{
 	typedef void(*endl_t)();
 	Log& operator<<(endl_t a){ std::cout<<std::endl; std::cout.flush(); return *this; }
 };
+*/
 inline void endl(){}
 
-#define cout Log()
+#define cout cout
 
 #define DMDEBUG(...) //__VA_ARGS__
 
